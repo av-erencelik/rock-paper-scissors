@@ -1,4 +1,4 @@
-
+game()
 
 
 
@@ -40,8 +40,11 @@ function game() {
     let playerScore = 0
     let computerScore = 0
     console.log("Rock Paper Scissors Game")
-    for (let i = 0; i < 5; i++) {
-        const playerChoice = prompt("What is your choice(rock-paper-scissors): ")
+    while (true) {
+        let playerChoice = prompt("What is your choice(rock-paper-scissors): ")
+        while (!(playerChoice.toLowerCase() == "scissors" || playerChoice.toLowerCase() == "rock" || playerChoice.toLowerCase() == "paper")) {
+            playerChoice = prompt("Please enter valid answer(rock-paper-scissors): ")
+        }
         const computerChoice = getComputerChoice()
         const result = playRound(playerChoice,computerChoice)
         console.log(result)
@@ -53,10 +56,10 @@ function game() {
             roundNumber ++
         }
         if (computerScore == 3) {
-            console.log("You won! Congratulations")
+            console.log("You lost! Don't be harsh on yourself. You can try again :)")
             break;
         }else if (playerScore == 3) {
-            console.log("You lost! Don't be harsh on yourself. You can try again :)")
+            console.log("You won! Congratulations")
             break;
         }
     }
