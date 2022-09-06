@@ -13,6 +13,7 @@
     <header>
         <div class="container">
             <div class="title-header"><h1>Rock Paper Scissors</h1></div>
+            <button id="newGame" onclick="window.location.reload(true)">START</button>
         </div>
     </header>
     <main>
@@ -29,13 +30,18 @@
                 <div class="button">
                     <button id="scissors"><i class="fa-solid fa-hand-scissors"></i></button>
                     <h2>SCISSORS</h2>
-                </div>
-                
+                </div>               
+            </div>
+            <div class="result">
+                <p id="result"></p>
             </div>
             <div class="score">
                 <h2 id="player">Player: 0</h2>
                 <h2 id="ai">Computer: 0</h2>
-            </div>          
+            </div> 
+            <div class="resultgame">
+                <h1 id="resultGame"></h1>
+            </div>         
         </div>
     </main>
 
