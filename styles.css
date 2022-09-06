@@ -43,15 +43,17 @@ i {
     gap: 50px;
 }
 #newGame {
-    width: 100px;
-    height: 50px;
-    margin-top: 100px;
+    width: 200px;
+    height: 100px;
+    margin-top: 40px;
     background-color: #A5F1E9;
     border: 3px solid #472D2D;
     color: #472D2D;
     font-weight: bolder;
     border-radius: 10px;
     transition:  transform 0.3s;
+    display: none;
+    font-size: larger;
 }
 .click {
     box-shadow: -1px 2px 16px 14px #472D2D;

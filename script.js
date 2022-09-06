@@ -1,20 +1,18 @@
 
 
+let playerScore = 0
+let computerScore = 0
+document.getElementById("newGame").addEventListener("click",restart)
+
 document.getElementById("rock").addEventListener("click", playRock)
 document.getElementById("paper").addEventListener("click",playPaper)
 document.getElementById("scissors").addEventListener("click",playScissors)
 
 
 
-let playerScore = 0
-let computerScore = 0
 
 function playRock () {
-    if (playerScore == 3 || computerScore == 3) {
-        playerScore = 0
-        computerScore = 0
-    }
-    console.log("hello")
+    
     const playerChoice = "rock"
     const computerChoice = getComputerChoice()
     let result = playRound(playerChoice,computerChoice)
@@ -29,11 +27,7 @@ function playRock () {
     game(playerScore,computerScore)
 }
 function playPaper () {
-    if (playerScore == 3 || computerScore == 3) {
-        playerScore = 0
-        computerScore = 0
-    }
-    console.log("hello")
+   
     const playerChoice = "paper"
     const computerChoice = getComputerChoice()
     let result = playRound(playerChoice,computerChoice)
@@ -48,11 +42,7 @@ function playPaper () {
 }
 
 function playScissors () {
-    if (playerScore == 3 || computerScore == 3) {
-        playerScore = 0
-        computerScore = 0
-    }
-    console.log("hello")
+    
     const playerChoice = "scissors"
     const computerChoice = getComputerChoice()
     let result = playRound(playerChoice,computerChoice)
@@ -68,13 +58,6 @@ function playScissors () {
 }
 
 
-function paper () {
-    return "paper"
-}
-
-function scissors () {
-    return "scissors"
-}
 function getComputerChoice () {
     let randomNumber = Math.floor(Math.random() * 2);
     if (randomNumber == 0) {
@@ -102,12 +85,24 @@ function game(pscore,cscore) {
     let pScore = pscore
     let cScore = cscore
 
-    if (cScore == 3) {
-            document.getElementById("resultGame").innerHTML = "You lost! Don't be harsh on yourself. You can try again :)"
-    }else if (pScore == 3) {
+    if (cScore == 5) {
+            document.getElementById("resultGame").innerHTML = "You lost! Don't be harsh on yourself. You can try again :)";
+            document.getElementById("newGame").style.display = "inline-block"
+    }else if (pScore == 5) {
             document.getElementById("resultGame").innerHTML = "You won! Congratulations!"
+            document.getElementById("newGame").style.display = "inline-block"
     }
     document.getElementById("player").innerHTML = `Player: ${pScore}`
     document.getElementById("ai").innerHTML = `Computer: ${cScore}`
     
+}
+function restart() {
+    playerScore = 0
+    computerScore = 0
+    document.getElementById("resultGame").innerHTML = ""
+    document.getElementById("resultGame").innerHTML = ""
+    document.getElementById("result").innerHTML = ""
+    document.getElementById("player").innerHTML = `Player: 0`
+    document.getElementById("ai").innerHTML = `Computer: 0`
+    document.getElementById("newGame").style.display = "none"
 }
