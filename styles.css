@@ -1,0 +1,36 @@
+body {
+    background-color: #A5F1E9;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    color: #472D2D;
+}
+header {
+    height: 250px;
+}
+.title-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    gap: 30px;
+}
+#rock,#scissors, #paper {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    border: 1px solid #472D2D;
+}
+i {
+    font-size: 75px;
+}
+#scissors i {
+    transform: rotate(90deg);
+}

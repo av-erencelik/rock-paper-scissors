@@ -4,20 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
     
     <header>
         <div class="container">
-            <div class="">Rock Paper Scissors</div>
+            <div class="title-header"><h1>Rock Paper Scissors</h1></div>
         </div>
     </header>
     <main>
         <div class="container">
-            <button id="rock">Rock</button>
-            <button id="paper">Paper</button>
-            <button id="scissors">Scissors</button>
+            <div class="button-container">
+                <div class="button">
+                    <button id="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
+                    <h2>ROCK</h2>
+                </div>
+                <div class="button">
+                    <button id="paper"><i class="fa-solid fa-hand"></i></button>
+                    <h2>PAPER</h2>
+                </div>
+                <div class="button">
+                    <button id="scissors"><i class="fa-solid fa-hand-scissors"></i></button>
+                    <h2>SCISSORS</h2>
+                </div>
+                
+            </div>
+            <div class="score">
+                <h2 id="player">Player: 0</h2>
+                <h2 id="ai">Computer: 0</h2>
+            </div>          
         </div>
     </main>
 

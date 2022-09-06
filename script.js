@@ -1,17 +1,5 @@
 game()
 
-
-
-
-
-
-
-
-
-
-
-
-
 function getComputerChoice () {
     let randomNumber = Math.floor(Math.random() * 2);
     if (randomNumber == 0) {
@@ -41,10 +29,10 @@ function game() {
     let computerScore = 0
     console.log("Rock Paper Scissors Game")
     while (true) {
-        let playerChoice = prompt("What is your choice(rock-paper-scissors): ")
-        while (!(playerChoice.toLowerCase() == "scissors" || playerChoice.toLowerCase() == "rock" || playerChoice.toLowerCase() == "paper")) {
-            playerChoice = prompt("Please enter valid answer(rock-paper-scissors): ")
-        }
+        // let playerChoice = prompt("What is your choice(rock-paper-scissors): ")
+        // while (!(playerChoice.toLowerCase() == "scissors" || playerChoice.toLowerCase() == "rock" || playerChoice.toLowerCase() == "paper")) {
+        //     playerChoice = prompt("Please enter valid answer(rock-paper-scissors): ")
+        // }
         const computerChoice = getComputerChoice()
         const result = playRound(playerChoice,computerChoice)
         console.log(result)
